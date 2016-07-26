@@ -6,7 +6,7 @@ Note that，You need to install Grib——API from ECMWF with the support of Net
 And Grib-API-V1.10.4 is recommended！！！
 How to install grib-api ？
 
-This tool is from ECMWF（you can download it here：https://software.ecmwf.int/wiki/display/GRIB/Home）.
+This tool is from ECMWF（you can download it from here：https://software.ecmwf.int/wiki/display/GRIB/Home）.
 Install like this：
   > tar zxvf grib_api-1.10.4.tar.gz
   > mkdir /usr/local/grib_api
