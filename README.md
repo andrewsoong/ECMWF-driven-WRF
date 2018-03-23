@@ -19,10 +19,10 @@ Install like this：
 and edit .bashrc：
 export GRIB_API_HOME=/usr/local/grib_api
 export PATH=$GRIB_API_HOME/bin:$PATH
-save，and source.
+save，and source it.
 
 
-1，How to transfer ECMFdata ：
+1，How to transfer ECMF data ：
 
 grib_set -r -s packingType=grid_simple W_NAFP_C_ECMF_20150428054553_P_C1D04280000042800001.bin 042800.grb
 
@@ -34,21 +34,21 @@ Now，042800.grib1 data can be used by WPS.
 
 But,ECMF data which was used was short of SLP ,soil moisture and soil temprature. So， We have to use  SLP，SM，ST from T639 model 
 outputs or GFS outputs.
-Like T639 model outputs:
+Take T639 model outputs as an example:
 Before using T639 data，we have to replace a F90 file rd_grib2.f90 in ：WPS/ungrib/src in order to modify a bug in reading and Ungrib T639 data. 
-This F90 file can be downloaded here（http://bbs.06climate.com/forum.php?mod=viewthread&tid=38302）.
+This rd_grib2.f90 file can be downloaded here（http://bbs.06climate.com/forum.php?mod=viewthread&tid=38302）or this dictory.
 And recompile WPS.
-Vtable file can be downloaded here（http://bbs.06climate.com/forum.php?mod=viewthread&tid=38302） with SLP and ST， SM only .
+Vtable file can be downloaded here（http://bbs.06climate.com/forum.php?mod=viewthread&tid=38302） with SLP and ST, SM only .
 
-Then，Use Metgrid.exe to obtain MET data like this:
+Then，Use metgrid.exe to obtain MET data like this:
  You may neet to edit namelist.wps：
  &metgrid
 fg_name = 'FILE','T639FILE',
 
 Then，we can obtain MET data.
 Note that，before run real.exe，you may need to edit namelist.input：
-num_metgrid_levels                  = 18,
-num_metgrid_soil_levels             = 4,
+num_metgrid_levels                  = 18, because ECMF data has 18 levels in vertical direction
+num_metgrid_soil_levels             = 4,
 Now you can run real.exe and wrf.exe as usual.
 
 2015-09-23
