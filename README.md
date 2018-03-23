@@ -49,7 +49,7 @@ Then，we can obtain MET data.
 Note that，before run real.exe，you may need to edit namelist.input：
 num_metgrid_levels                  = 18,
 num_metgrid_soil_levels             = 4,
-Now you can run real.exe and wrf.exe like usual.
+Now you can run real.exe and wrf.exe as usual.
 
 2015-09-23
 Andrew Soong
