@@ -1,4 +1,4 @@
-# EC-driven-WRF
+# ECMWF-driven-WRF
 Using ECMWF prediction pruducts to drive WRF-ARW
 
 Here,We use ECMF data to run WRF-ARW.These data were downloaded from CMA（CMACAST） and this datasets was not got for free.
@@ -47,9 +47,9 @@ fg_name = 'FILE','T639FILE',
 
 Then，we can obtain MET data.
 Note that，before run real.exe，you may need to edit namelist.input：
-num_metgrid_levels                  = 18, because ECMF data has 18 levels in vertical direction
+num_metgrid_levels                  = 18, # because ECMF data has only 18 levels in vertical direction
 num_metgrid_soil_levels             = 4,
-Now you can run real.exe and wrf.exe as usual.
+Now you can run ./real.exe and ./wrf.exe as usual.
 
 2015-09-23
 Andrew Soong
