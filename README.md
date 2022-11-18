@@ -1,7 +1,7 @@
 # ECMWF-driven-WRF
-Using ECMWF prediction pruducts to drive WRF-ARW
+Using ECMWF prediction pruducts to force WRF-ARW
 
-Here,We use ECMF data to run WRF-ARW.These data were downloaded from CMA（CMACAST） and this datasets was not got for free.
+Here, We use ECMWF data to run WRF-ARW.These data were downloaded from CMA（CMACAST） and this datasets was not got for free.
 Note that，You need to install Grib——API from ECMWF with the support of Netcdf and Jasper！
 And Grib-API-V1.10.4 is recommended！！！
 How to install grib-api ？
