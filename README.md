@@ -3,9 +3,9 @@
 Note：The latest ECMWF forecast data can be found at: https://data.ecmwf.int/forecasts/20250219/00z/ifs/0p25/oper/. For information on how to drive WRF with this data, please refer to: https://forum.mmm.ucar.edu/threads/change-in-soil-variables-from-ecmwf-cycle-49r1.19864/#post-48546.
 
 
-Using ECMWF prediction pruducts to force WRF-ARW
+Using ECMWF prediction pruducts（before 2025） to force WRF-ARW
 
-Here, We use ECMWF data to run WRF-ARW.These data were downloaded from CMA（CMACAST） and this datasets was not got for free.
+Here, We use ECMWF data（before 2025） to run WRF-ARW.These data were downloaded from CMA（CMACAST） and this datasets was not got for free.
 Note that，You need to install Grib——API from ECMWF with the support of Netcdf and Jasper！
 And Grib-API-V1.10.4 is recommended！！！
 How to install grib-api ？
